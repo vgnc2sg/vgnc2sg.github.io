@@ -25,11 +25,78 @@
             <div id="subtitle">Magento Hackathon Leibzig 2017 (Randnotizen)</div>
             <nav>
             <ul>
-                <li class="highlight"><a href="index.html">Home</a></li>
+                <li class="highlight"><a href="index.html">Startseite</a></li>
             </ul>
             </nav>
         </header>
-        <div id="content">&nbsp;
+        <div id="content">
+            <article>
+                <h2>Hallo (Magento) Welt!</h2>
+                    <p>Dies und das, ein paar Randnotizen zum Magento Hackathon Leipzig 2017 #mhlej17</p>
+            </article>
+            <article>
+                <h2>Schnell mal Magento 2 auf einem Windows-System aufsetzen - Stichpunkte</h2>
+                <p>Stell dir vor du bist auf einem Magento Hackathon und nix mit Magento auf deinem Rechner.</p>
+                <h3>Schritt für Schritt</h3>
+                <ol>
+                    <li>Einen lokalen Server einrichten. (<a href="#links-lokaler-server">mehr</a>)</li>
+                    <li>Datenbank vorbereiten. (<a href="#datenbank-vorbereiten">mehr</a>)</li>
+                    <li>Composer Herunterladen und installieren. (<a href="#composer-installieren">mehr</a>)</li>
+                    <li>Magento herunterladen entpacken und Co. (<a href="#composer-installieren">mehr</a>)</li>
+                </ol>
+            </article>
+            <article>
+                <a name="links-lokaler-server" ></a>
+                <h3>Einen lokalen Server einrichten.</h3>
+
+                <p>
+                    Ich hab' bei mir auf dem Rechner <a href="https://www.apachefriends.org/de/index.html">XAMPP</a> installiert.
+                    und einen virtuellen Host für meine Magento 2 Seite eingerichtet.<br>
+                    <br>
+                    <span>C:\xampp\apache\conf\extra\httpd-vhosts.conf</span>
+                    
+                </p>
+                <pre>   &lt;VirtualHost *&gt;
+      DocumentRoot &quot;C:/xampp/htdocs/magento2.local&quot;
+      ServerName magento2.local
+      DirectoryIndex index.php
+      &lt;Directory &quot;C:/xampp/htdocs/magento2.local&quot;&gt;
+        AllowOverride All
+        Allow from All
+      &lt;/Directory&gt;
+    &lt;/VirtualHost&gt;</pre>
+                <p>
+                    im besten Fall läuft jetzt ein lokaler Server mit MySQL und Co.
+                </p>
+            </article>
+            <article>
+                <a name="datenbank-vorbereiten" ></a>
+                <h3>Datenbank vorbereiten.</h3>
+                <p>Über phpMyAdmin eine Datenbank für Magento 2 erstellen (utf8_general_ci).</p>
+            </article>
+            <article>
+                <a name="composer-installieren" ></a>
+                <h3>Composer Herunterladen und installieren.</h3>
+                <p><a href="https://getcomposer.org/download/">Composer Download</a></p>
+            </article>
+            <article>
+                <a name="composer-installieren" ></a>
+                <h3>Magento herunterladen entpacken und Co.</h3>
+
+                <ul>
+                    <li><a href="https://github.com/magento/magento2">Magento 2 bei GitHub herunterladen</a></li>
+                    <li>entpacken in: C:/xampp/htdocs/magento2.local</li>
+                    <li>in den Ordner wechseln, Eingabeaufforderung öffnen, composer install ausführen.</li>
+                </ul>
+
+            </article>
+            <article>
+                <h2>Notizen für das nächste Mal:</h2>
+                <ol>
+                    <li>Dein Rechner sollte außerhalb deines Heim-, Firmennetzwerk funktionieren.</li>
+                    <li>Pilze</li> 
+                </ol>
+            </article>
         </div> <!-- /end #content-->
         <div id="rightcol">
             <aside>
